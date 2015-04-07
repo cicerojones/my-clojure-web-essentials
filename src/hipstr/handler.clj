@@ -66,7 +66,7 @@
 
 (def app
   (-> (routes
-       home-routes base-routes test-routes) ; not 'app-routes' as in tutorial
+       home-routes test-routes base-routes ) ; not 'app-routes' as in tutorial
       development-middleware
       production-middleware
           ;; :session-options {:timeout (* 60 30)}
