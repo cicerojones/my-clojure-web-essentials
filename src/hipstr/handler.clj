@@ -59,5 +59,6 @@
              development-middleware
              production-middleware
           :session-options {:timeout (* 60 30)}
-          :access-rules []
-          :formats [:json-kw :edn]))
+          ;; :access-rules []
+          ;; :formats [:json-kw :edn]
+          ))
