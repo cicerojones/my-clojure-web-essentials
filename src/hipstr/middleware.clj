@@ -30,6 +30,12 @@
 ;;         wrap-exceptions)
 ;;     handler))
 
+(def development-middleware
+  [go-bowling?
+   wrap-error-page
+   wrap-exceptions])
+
+
 (defn production-middleware [handler]
   (-> handler
       
