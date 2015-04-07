@@ -14,7 +14,7 @@
   {:status 200
    :headers {"Content-Type" "text/html"}
    :body (str "<html><body><dt>Bowling much?</dt>"
-              "<dd>" (:go-bowling? request)"</dd></body></html>")})
+              "<dd>" (:go-bowling? request) "</dd></body></html>")})
   
 
 (defroutes home-routes
