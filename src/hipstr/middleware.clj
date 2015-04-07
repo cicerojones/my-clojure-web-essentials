@@ -13,6 +13,11 @@
             
             ))
 
+(defn go-bowling? [handler]
+  (fn [request]
+    (let [request (assoc request :go-bowling? "YES! NOW!")]
+      (handler request))))
+
 (defn log-request [handler]
   (fn [req]
     (timbre/debug req)
