@@ -10,7 +10,7 @@
 (defn about-page []
   (layout/render "about.html"))
 
-(defn foo-response []
+(defn foo-response [request]
   {:status 200
    :headers {"Content-Type" "text/html"}
    :body (str "<html><body><dt>Bowling much?</dt>"
