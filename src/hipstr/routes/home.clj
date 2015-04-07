@@ -18,4 +18,4 @@
 
 (defroutes home-routes
   (GET "/" [] (home-page))
-  (GET "/about" [] (about-page)))
+  (GET "/about" [] (foo-response)))
