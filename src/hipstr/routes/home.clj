@@ -13,7 +13,8 @@
 (defn foo-response []
   {:status 200
    :headers {"Content-Type" "text/html"}
-   :body "<html><body><h1>Why Hello there, World...</h1></body></html>" })
+   :body (str "<html><body><dt>Bowling much?</dt>"
+              "<dd>" (:go-bowling? request)"</dd></body></html>")})
   
 
 (defroutes home-routes
