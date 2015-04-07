@@ -30,6 +30,7 @@
 (defn development-middleware [handler]
   (if (env :dev)
     (-> handler
+        go-bowling?
         wrap-error-page
         wrap-exceptions)
     handler))
