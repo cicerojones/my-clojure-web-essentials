@@ -43,6 +43,8 @@
 ;;    wrap-error-page
 ;;    wrap-exceptions])
 
+;; why was this defined as a var? It appears to call a function in a vector??
+
 
 (defn production-middleware [handler]
   (-> handler
