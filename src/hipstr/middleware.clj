@@ -23,12 +23,12 @@
     (timbre/debug req)
     (handler req)))
 
-(defn development-middleware [handler]
-  (if (env :dev)
-    (-> handler
-        wrap-error-page
-        wrap-exceptions)
-    handler))
+;; (defn development-middleware [handler]
+;;   (if (env :dev)
+;;     (-> handler
+;;         wrap-error-page
+;;         wrap-exceptions)
+;;     handler))
 
 (defn production-middleware [handler]
   (-> handler
