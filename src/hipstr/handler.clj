@@ -1,6 +1,7 @@
 (ns hipstr.handler
   (:require [compojure.core :refer [defroutes routes]]
             [hipstr.routes.home :refer [home-routes]]
+            [hipstr.routes.test-routes :refer [test-routes]]
             [hipstr.middleware
              :refer [development-middleware production-middleware]]
             [hipstr.session :as session]
@@ -65,7 +66,7 @@
 
 (def app
   (-> (routes
-       home-routes base-routes) ; not 'app-routes' as in tutorial
+       home-routes base-routes test-routes) ; not 'app-routes' as in tutorial
       development-middleware
       production-middleware
           ;; :session-options {:timeout (* 60 30)}
