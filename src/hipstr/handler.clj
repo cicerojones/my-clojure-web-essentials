@@ -54,11 +54,12 @@
 ;;       development-middleware
 ;;       production-middleware))
 
-(def app (-> (routes
-              home-routes base-routes) ; not 'app-routes' as in tutorial
-             development-middleware
-             production-middleware
-          :session-options {:timeout (* 60 30)}
+(def app
+  (-> (routes
+       home-routes base-routes) ; not 'app-routes' as in tutorial
+      development-middleware
+      production-middleware
+          ;; :session-options {:timeout (* 60 30)}
           ;; :access-rules []
           ;; :formats [:json-kw :edn]
           ))
