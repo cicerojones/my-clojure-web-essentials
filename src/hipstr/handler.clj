@@ -54,8 +54,8 @@
 ;;       development-middleware
 ;;       production-middleware))
 
-(def app (app-handler
-          [home-routes base-routes] ; not 'app-routes' as in tutorial
+(def app (-> (routes
+              home-routes base-routes) ; not 'app-routes' as in tutorial
           :middleware (load-middleware)
           :session-options {:timeout (* 60 30)
                             :timeout-response (redirect "/")}
