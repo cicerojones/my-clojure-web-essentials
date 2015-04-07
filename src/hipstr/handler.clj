@@ -56,8 +56,8 @@
 
 (def app (-> (routes
               home-routes base-routes) ; not 'app-routes' as in tutorial
-          :middleware (load-middleware)
-          :session-options {:timeout (* 60 30)
-                            }
+             development-middleware
+             production-middleware
+          :session-options {:timeout (* 60 30)}
           :access-rules []
           :formats [:json-kw :edn]))
