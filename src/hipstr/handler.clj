@@ -39,8 +39,8 @@
   ;;  {:path "hipstr.log" :max-size (* 512 1024) :backlog 10})
 
   (timbre/set-config!
-   [:shared-appender-config :rolling :path]
-   {:path "hipstr.log" :max-size (* 512 1024) :backlog 10})
+   [:shared-appender-config :rolling :path] "logs/hipstr.log")
+  
   
   (if (env :dev) (parser/cache-off!))
   ;;start the expired session cleanup job
