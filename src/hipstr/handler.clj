@@ -58,6 +58,6 @@
               home-routes base-routes) ; not 'app-routes' as in tutorial
           :middleware (load-middleware)
           :session-options {:timeout (* 60 30)
-                            :timeout-response (redirect "/")}
+                            }
           :access-rules []
           :formats [:json-kw :edn]))
