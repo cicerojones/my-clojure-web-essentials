@@ -7,6 +7,7 @@
             [compojure.route :as route]
             [taoensso.timbre :as timbre]
             [taoensso.timbre.appenders.rotor :as rotor]
+            [taoensso.timbre.appenders.rolling :as rolling]
             [selmer.parser :as parser]
             [environ.core :refer [env]]
             [cronj.core :as cronj]))
