@@ -15,7 +15,7 @@
 
 ;; some problems with using this; the request is being ignored, but
 ;; still some html is being returned with the desired string question,
-;; but no interpolation fancyness
+;; but no interpolation fanciness
 
 (defn go-bowling? [handler]
   (fn [request]
