@@ -13,6 +13,10 @@
             
             ))
 
+;; some problems with using this; the request is being ignored, but
+;; still some html is being returned with the desired string question,
+;; but no interpolation fancyness
+
 (defn go-bowling? [handler]
   (fn [request]
     (let [request (assoc request :go-bowling? "YES! NOW!")]
@@ -29,6 +33,10 @@
         wrap-error-page
         wrap-exceptions)
     handler))
+
+;; appear that the following middleware failed, whereas the above,
+;; luminus version 'works' with about being told about the "go-bowling"
+;; see the definition of go-bowling?
 
 ;; (def development-middleware
 ;;   [go-bowling?
