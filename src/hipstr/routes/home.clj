@@ -28,6 +28,7 @@
   ;; 'home-page'
   (GET "/" [] (home-page)) 
   (GET "/about" [] (about-page))
+  (GET "/signup" [] "Hey there, pal, sign up now!")
   ;; (GET "/about" request (foo-response request)))
   ;; (ANY "/req" request (str request)) ; ANY is macro from where?
   ;; (GET "/req" request (str request))
