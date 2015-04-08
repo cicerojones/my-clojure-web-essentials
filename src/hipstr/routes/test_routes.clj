@@ -2,4 +2,5 @@
   (:require [compojure.core :refer :all]))
 
 (defroutes test-routes
-  (GET "/req" request (str request)))
+  (GET "/req" request (str request))
+  (GET "/req/:val" [val] (str val)))
