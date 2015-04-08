@@ -4,4 +4,5 @@
 (defroutes test-routes
   (GET "/req" request (str request))
   ;; (GET "/req/:val" [val] (str val))
-  (GET "/req/:val" [val more] (str val "<br>" more)))
+  ;; (GET "/req/:val" [val more] (str val "<br>" more)))
+  (GET "/req/:val" [val :as request] (str val "<br>" request)))
