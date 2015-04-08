@@ -2,13 +2,10 @@
 {% block content %}
   <div class="jumbotron">
     <h1>Welcome to hipstr</h1>
-    <p>Time to start building your site!</p>
-    <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
-  </div>
-
-  <div class="row">
-    <div class="span12">
-    {{docs|markdown}}
-    </div>
+    <p>Obscurely building your vinyl cred since, like, now.</p>
+    <p><a class="btn btn-primary btn-lg" href="{{servlet-context}}/signup">Sign Up</a>
+      or
+      <a class="btn btn-primary btn-lg"
+	 href="{{servlet-context}}/login">Login</a></p>
   </div>
 {% endblock %}

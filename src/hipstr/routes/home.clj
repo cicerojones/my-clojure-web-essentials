@@ -5,7 +5,13 @@
 
 (defn home-page []
   (layout/render
-    "home.html" {:docs (-> "docs/docs.md" io/resource slurp)}))
+   "home.html" {:docs (-> "docs/docs.md" io/resource slurp)}))
+
+;; the default tutorial version differs notably!
+
+;; (defn home-page []
+;;   (layout/render
+;;     "home.html" {:content (util/md->html "/md/docs.md")}))
 
 (defn about-page []
   (layout/render "about.html"))
