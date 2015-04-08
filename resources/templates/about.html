@@ -1,4 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-  <p>this is the story of hipstr... work in progress</p>
+  <div class="jumbotron">
+    <h1>Welcome to PC-SETS</h1>
+    <p>this is the story of pc-set theory...work in progress</p>
+  </div>
+<p>What is pc-set theory? Can you even format it consistently? Luckily there's a lot of CSS already behind the scenes, makes all this at least look prettier. There doesn't even appear to be a real need to punctuate this with paragraphs just yet.</p>
+<p>Ok, now there is</p>
+<li>
+  (0 1 2 3)
+<li>
+  (0 1 2 4)
+<li>
+  (0 1 2 5)
+  <p>Ok, technically, this is what pc-set theory might look like. I mean, that up there.</p>
+  <p>So, now basically this is, for my purposes right now, just a page of static HTML, which could be served up as a static file, when this...something is requested. </p>
+  <p>What exactly is requested? A given URL, or rather a URI at the basic URL of the root of this site. </p>
+  <p>And what happens when that page is 'requested?' Well, it ain't all that roses petals, but basically a function gets called! Yup, that's all!</p>
+  <p>Ok, not just any function. And this explanation should really cut to the chase so that it can start including some dynamic code (you're gonna need forms to make that really justify not just using a markdown file, tho, aren't ya, buddy?).</p>
+  <p>Turns out that the function that gets called is itself calling another function called "render," which is in the layout.clj namespace. And that badboy, which "implements" (?) RenderableTemplate is some whole other.</p>
+  <p>But that's not all you can ask of the function that gets called with a given URL request. You can process arbitrary strings (ultimately kinda icky).</p>
+  <p>The End. For now. Why don't you learn how to make some other divs and substitute in some data that gets requested in a form or something?<p>
 {% endblock %}
